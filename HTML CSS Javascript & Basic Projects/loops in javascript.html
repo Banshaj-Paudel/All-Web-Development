@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loops in Javascript</title>
+</head>
+<body>
+	<div><h1>This is a container</h1><p>This page is about loops in Javascript and you can press Ctrl + Shift + I to see the developer console.</p></div>
+<script type="text/javascript">
+	console.log("This page is working");
+
+	// let i = 2
+	// for(i; i<= 10; i++){
+	// 	console.log(i);
+	// }
+
+	// let age = 0
+	// for(age; age<= 100; age++){
+	// 		console.log(age);
+	// }
+// for(the initial value of the variable; condition to be check; updater){function to be done}
+let lang = ["python", "golang", "C", "Javascript", "PHP"];
+//for loops are used to iterate only arrays, object cannot be itterated with this.
+
+//Using for loop to display the elements of an array.
+// for(let index= 0; index < lang.length; index++){
+// 	console.log(lang[index]);
+// }
+
+//Using forEach loop:
+// lang.forEach(function(items){console.log(items + " is a programming language")});
+//explanation: *name of array that we have to itterate*.forEach(function*creating a function here*(elements inside the array denoted using a word){task to be done in the function, when it is envoked});
+
+//Using for...of loop:
+// for(bhasha of  lang){console.log(bhasha + "is a programming language.")};
+// ----------------------------------------------------------------------------------------------------------------------
+
+// To itterate and object's elements, we use for...in loop
+// let langs = {
+// 	name : "Javascript",
+// 	difficulty : 'medium',
+// 	Usage : "Web Development",
+// }
+// for(elements in langs){
+// 	console.log(`It's ${elements} is ${langs[elements]}`)
+// }
+//Another example of For....in loop:
+// let subject = {
+// 	name : "Economics",
+// 	difficulty : "very hard",
+// 	teacher : "Santosh Sir",
+// }
+
+// for(saman in subject){
+// 	console.log(`The subject's ${saman} is ${subject[saman]}`)
+// }
+
+//While loop in js:
+// let i = 1
+// while(i<12){
+// 	console.log(`the value of i is ${i} and it is less than 12`);
+// 	i++;
+// }
+
+//do while loop in js:
+// let h = 1;
+// do{
+// 	console.log(`the value is ${h}`);
+// 	h++;
+// }while(h<12);
+</script>
+</body>
+</html>

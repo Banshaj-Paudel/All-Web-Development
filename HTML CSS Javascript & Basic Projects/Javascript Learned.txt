@@ -1,0 +1,64 @@
+Things learned in Javascript:
+
+Creating Variables:
+var, let, const
+
+Data-Types:
+String, integer, float
+
+Operand:
+The number on which operators are going to be performed
+
+Operations:
+Mathematical expressions like +,-,++,etc
+
+Operators:
+unary operatos: has only one operand and one operator
+binary operator: has two or more than two operands and operators
+
+Arithmetic Operators:
+(+) Add
+(-) subtract
+(*) multiply
+(/) divide
+(**) exponential {puts the num2 as the power of num1}
+(++) adds 1 to the variable:
+		if use before the variable then displays the updated value, and if used after it will only update the value and display the older value
+(--) subtracts 1 to the variable:
+		if use before the variable then displays the updated value, and if used after it will only update the value and display the older value
+
+Strings and it's Functions:
+
+To join use two strings, we use "+". Eg: var1 + var2
+To join a string variable in a line, we use this format, console.log(`${var1}`)
+var1.length is used to find out the total characteristics in a variable. It's index count starts from 1.
+\n is used to creaete new lines between a string
+\t creates tab space between string
+new String("Here goes the new string"); This way we can add new string.
+var1.toUpperCase is used to uppercase the string
+var1.toLowerCase is is used to lowercase the string
+var1.indexOf function is used to find the string place number from where the word in the value begins from, it counts the index from left-right.
+var1.lastIndexOf function is used to find the string place number from where the word in the value begins from, it counts the index from right-left.
+var1.slice function is used to get a piece from the string. It takes two values in the function i.e.(a, b). It prints the string from a-b-1. I takes both negative & positive value
+var1.substring function is used to get a piece from the string. It takes two values in the function i.e.(a, b). It prints the string from a-b-1. I takes only positive values.
+var1.trim() This method is used to remove several unwanted blank spaces from a string. It removes white space only before the first word
+var1.charAt()This method is used to extract the character of a string from the given index value
+var1.charCodeAt()This method is used to find the UTF encoding of the character
+
+Notes on variables and Block space:
+
+we can use var instead of let because let will not allow to create two variables by same name but var will allow it.
+A block is set using "{}". Block is a different place in the same code page which has it's own different world.
+If we use "let a" variable outside of a block and again make a let a inside of a block then it will be allowed because it is inside a block space.
+const is another form of creating a variable. The value inside const cannot be changed.
+
+Scope and If Else conditionals:
+
+if...else if.....else
+switch...case....break
+
+
+alert, prompt, confirmation and using if...else conditionals with prompt.
+For....loop
+
+

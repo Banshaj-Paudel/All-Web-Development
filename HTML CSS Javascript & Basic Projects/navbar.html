@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navbar</title>
+
+<style>
+	#navbar{
+		background-color: rebeccapurple;
+		border-radius: 10px;
+	}
+
+	#navbar ul{
+		overflow: auto;
+	}
+	#navbar li{
+		float: right;
+		list-style: none;
+		margin: 11px 21px;
+	}
+
+	#navbar a{
+		text-decoration: none;
+    	color: #a8f3f2;
+    	font-weight: 1000;
+	}
+
+	#navbar a:hover{
+		color: yellow;
+    	font-weight: 1000;
+    	border: 0px solid rebeccapurple;
+    	background-color: #499b93;
+    	border-radius: 16px;
+    	padding: 0px 8px;
+	}
+
+	#navbar input{
+		margin-top: 10px;
+    	border-radius: 15px;
+    	border: 0px solid rebeccapurple;
+    	width: 185px;
+    	padding-left: 15px;
+    	height: 27px;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<nav id="navbar">
+			<ul>
+				<li><a href="#">Contact Me</a></li>
+				<li><a href="#">Blogs</a></li>
+				<li><a href="#">Hall of Fames</a></li>
+				<li><a href="#">Skills</a></li>
+				<li><a href="#">Home</a></li>
+				<input type="text" name="search" placeholder="Search Here">
+			</ul>
+		</nav>
+	</header>
+</body>
+</html>

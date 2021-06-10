@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Attribute & nth child pseudo Selectors</title>
+	<style>
+		.container{
+			display: block;
+			width: 233px;
+			margin: auto;
+
+		}
+		input{
+			display: block;
+		}
+
+		input[type='text']{
+			border: 2px solid red;
+			padding: 23px;
+		}
+
+		input[type='email']{
+			border: 2px solid rebeccapurple;
+			color: skyblue;
+			font-size: 20px;
+			padding: 5px;
+		}
+
+		input[type='password']{
+			border: 3px solid black;
+			font-size: 22px;
+			color: purple;
+			background-color: yellow;
+		}
+
+		a[target='_self']{
+			font-size: 44px;
+			color: violet;
+		}
+
+		li:nth-child(3){
+			color: purple;
+		}
+
+		li:nth-child(2n+0){
+			font-size: 10px;
+			color: red;
+		}
+
+		li:nth-child(odd){
+			background-color: black;
+			color: white;
+		}
+
+		li:nth-child(even){
+			background-color: red;
+			color: white;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1><a href="https://www.facebook.com" target="_self">Go to Facebook</a></h1>
+		<h1><a href="https://www.google.com" target="_blank">Go To Google</a></h1>
+		<form class="form-control">
+			<input type="text" placeholder="Enter Your Name">
+			<input type="password" placeholder="Enter Your Name">
+			<input type="submit" value="Submit Now">
+			<input type="email" placeholder="Enter your email">
+		</form>
+		<ul>
+			<li class="item" id="item-1">item-1</li>
+			<li class="item" id="item-2">item-2</li>
+			<li class="item" id="item-3">item-3</li>
+			<li class="item" id="item-4">item-4</li>
+			<li class="item" id="item-5">item-5</li>
+			<li class="item" id="item-6">item-6</li>
+		</ul>
+	</div>
+</body>
+</html>

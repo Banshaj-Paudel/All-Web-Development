@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Strings & String Methods in Javascripts</title>
+	<style type="text/css">
+		body{
+			color: white;
+			background-color: black;
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="container">
+		<h1>Strings and String Methods.</h1>
+		<div id="content"></div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+
+	<script type="text/javascript">
+		// var string = "This is a String";
+		var string = "This is a String ";
+		var lang = "in javascript";
+		var Nickname = "Bhairu";
+		var name = "Banshaj";
+
+		// String Concatination in Javascript
+		console.log(string + lang);
+
+		// Printing strings and Concatinating with variables
+		console.log(`${name} is a web security learner, who has a nickname & that is ${Nickname}`)
+
+		// To print the total length of the string
+		var len = name.length;
+		console.log(`The total characters in the name variable is ${len}`);
+
+		// Using Escape Sequences
+
+		// 1. \n = to create new line
+		console.log("This is a string\ncreated using\nescape Sequences")
+
+		// 2. \t = creates a tab space
+		console.log('Here we have used tab escape sequence that \t creates a space between strings')
+
+		// # Creating a string using string constructor. This string is displayed with it's index values/
+		var SC = new String("String constructor");
+		console.log(SC);
+
+		// #Creating a string dynamically using JavaScript to present inside the DOM(HTML Page)
+		document.getElementById('content').innerHTML = '<h3>this is an h3 heading</h3>'
+
+		</script>
+</body>
+</html>

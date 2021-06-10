@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Arrow Functions</title>
+	<style type="text/css">
+		*{
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+<div class="container">This is Arrow Function Tutorial</div>
+<script type="text/javascript">
+	// function greet(){
+	// 	console.log("Good Morning");
+	// }
+
+	// Arrow function or shorthand for writing a function
+	let hello = ()=>{
+		console.log("Good Morning");
+	}
+
+	setTimeout(()=>{
+		console.log("we're inside a set timeout function")
+	}, 3000);
+
+	let maths = (a, b)=>{
+		let c = console.log("sum = ", a+b);
+		console.log("difference = ", b-a);
+		console.log("product = ", a*b);
+		console.log("divide = ", b/a);
+		return c;
+	}
+</script>
+</body>
+</html>

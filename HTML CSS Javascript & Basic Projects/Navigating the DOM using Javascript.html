@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Navigating and Manipulating the Document Object Module (DOM)</title>
+</head>
+<body>
+	<div class="container" id="main">
+		<h1>This is a heading in the first container</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="container" id="Another">
+		<h1>This is a heading in the another container</h1>
+		<p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p id="p2">Yet Another Paragraph here</p>
+	</div>
+
+<script type="text/javascript">
+	// Selecting elements using ID and Class
+
+	// let main = document.getElementById('main');
+	// console.log(main)	
+
+	// let containers = document.getElementsByClassName('container');
+	// console.log(containers);
+
+	// Selecting CSS selectors
+	//It will return the very first selector when it is runned.
+
+	// let selection = document.querySelector('.container');
+	// let selection2 = document.querySelector('#Another');
+	// console.log(selection, selection2);
+
+	// let sel = document.querySelector('#Another>p');
+	// console.log(sel);
+
+	// document.querySelectorAll will select all the element inside instead of only one element
+	// let sel = document.querySelectorAll('#Another>p');
+	// console.log(sel);
+
+	// Changing the innerHTML of an element using Javascript
+	// let sel = document.querySelectorAll('#Another>p');
+	// sel[0].innerHTML = "This was changed using Javascript";
+</script>
+</body>
+</html>

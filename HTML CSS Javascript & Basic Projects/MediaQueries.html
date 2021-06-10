@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box{
+            color: red;
+            background-color: black;
+            font-size: 70px;
+            text-align: center;
+            
+        }
+        @media(min-width: 500px) and (max-width: 600px)
+         {
+            #box1{
+                background-color: saddlebrown;
+                display: block;
+            }
+        }
+        @media (min-width: 600px) and (max-width: 700px) {
+            #box2{
+                display: block;
+                background-color: salmon;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">Iphone</div>
+    <div class="box" id="box2">Tesla</div>
+    <div class="box" id="box3">Porsche</div>
+    <div class="box" id="box4">Beneli</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Position Properties</title>
+	<style>
+		/*CSS Properties: absolute, relative, sticky, fixed, static(default)*/
+	.box{
+		border: 2px solid black;
+		width: 150px;
+		height: 150px;
+		margin: 2px;
+		display: inline-block;
+
+	}
+
+	.Container{
+		border: 2px solid rebeccapurple;
+		background-color: grey;
+		border-radius: 10px;
+		height: 2000px;
+
+	}
+	#box3{
+		/*Position-Relative
+		position-relative means that the element will be moving from it's position to the area set by us; We can set top-bottom-left-right of the element selected and move it; We use position-relative when we want to move the element from it's place and also have an empty gap left out in the element that was moved using position;
+
+		Example:
+
+		position: relative;
+		top: 10px;
+		left: 10px*/
+/*------------------------------------------------------------------------------------------------------------------------*/
+		/*Position-Absolute
+		position-absolute means that the element will be moving from according to the parent of that particularly selected element and also when moved, the element will not be leaving any sort of gap; We use position-absolute when we want to move the element from it's place without leaving any empty gap from the selected element.
+
+		Example:
+
+		position: absolute;
+		top: 171px;
+		left: 9px;*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+		/*Position-Fixed
+		position-fixed means that the element will be fixed when we scroll down the page and it will move or change according to the total height of the browser. Also it will be leaving no gaps when it is moved from it's original place.
+
+		Example:
+
+		position: fixed;
+		right: 30px;
+		bottom: 10px;*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+/*		Position-Sticky
+		position-sticky means that the element will be sticked to it's position and it will not move even if we scroll down, also when we set the top-value of the selected element, it will mean that when we scroll down, it will gain that height when we scroll down.
+
+		Example:
+
+		position: sticky;
+		top: 10px;*/
+	}
+	</style>
+</head>
+<body>
+	<div class="Container">
+
+		<div class="box" id="box1">1</div>
+		<div class="box" id="box2">2</div>
+		<div class="box" id="box3">3</div>
+		<div class="box" id="box4">4</div>
+
+	</div>
+</body>
+</html>

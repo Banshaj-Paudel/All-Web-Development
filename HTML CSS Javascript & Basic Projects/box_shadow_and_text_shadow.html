@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text shadow</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .card {
+            padding: 23px 12px;
+            margin: 23px 13px;
+            background-color: sandybrown;
+            /* border: 2px solid red; */
+            /* box-shadow: 12px 11px rebeccapurple; */
+            /* box-shadow: -12px -11px rebeccapurple; */
+            /* box-shadow: 12px 8px 10px rebeccapurple; */
+            /* box-shadow: 12px 8px 10px 10px rebeccapurple; */
+            box-shadow: 12px 8px 10px 10px rgba(52, 207, 187, 0.5);
+        }
+        .card h2{
+            /* text-shadow: 3px 2px whitesmoke; */
+            /* text-shadow: 3px 2px 4px whitesmoke; */
+            text-shadow: 3px 2px 4px whitesmoke;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>card-1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cupiditate qui est consectetur
+                voluptatibus, sit totam earum necessitatibus cum, eaque explicabo nihil, numquam aut. Aspernatur
+                cupiditate sapiente, maiores quam non temporibus repellat sequi esse.</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>card-2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cupiditate qui est consectetur
+                voluptatibus, sit totam earum necessitatibus cum, eaque explicabo nihil, numquam aut. Aspernatur
+                cupiditate sapiente, maiores quam non temporibus repellat sequi esse.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>card-3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cupiditate qui est consectetur
+                voluptatibus, sit totam earum necessitatibus cum, eaque explicabo nihil, numquam aut. Aspernatur
+                cupiditate sapiente, maiores quam non temporibus repellat sequi esse.</p>
+        </div>
+    </div>
+</body>
+
+</html>

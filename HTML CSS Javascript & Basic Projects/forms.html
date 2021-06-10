@@ -1,0 +1,33 @@
+<h1>Bhairu Security Services</h1>
+<h3>Tinkune Kathmandu</h3>
+
+<p>Fill this form to be eligible for the program.</p>
+
+<form action="form.php" method="Post">
+	<div>Name: <input type="text" name="uName"></div>
+
+	<div>Age: <input type="text" name="uAge"></div>
+
+	<div>Program: 
+	<select>
+		<option value="Bug Bounty Training">Bug Hunting Training</option>
+		<option value="Certification">Certification</option>
+		<option value="Open CTF" selected=""> Open CTF</option>
+		<option value="Hackathon">Hackathon</option>
+	</select>
+	</div>
+
+	<div>Contact: <input type="text" name="uContact" minlength="9" maxlength="10"></div>
+
+	<div>Email: <input type="text" name="uEmail"></div>
+
+	<div>Do you have a personal laptop? Yes<input type="radio" name="uLaptop"> No<input type="radio" name="uLaptop"></div>
+
+	<div>Do you have internet connection higher than 15MBps? Yes<input type="radio" name="uInternet"> No<input type="radio" name="uInternet"> I will get it<input type="radio" name="uInternet	"></div>
+
+	<div>How many participants are there in your team <br>
+		<input type="number" name="uTeam">
+	</div>
+
+	<div><input type="submit" name="Submit Now"> <input type="reset" name="Reset All"></div>
+</form>

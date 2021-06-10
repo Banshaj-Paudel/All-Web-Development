@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive font size units</title>
+	<style>
+		html{
+			font-size: 20px;
+		}
+		.container{
+			border: 5px solid blue;
+			height: 97.9vh;
+    		width: 99.3vw;
+			/*font-size: 10px;*/
+		}
+		h1{
+			text-align: center;
+			/*border: 4px solid rebeccapurple;*/
+			/*margin : 5px;*/
+		}
+
+		#first{
+			/*font-size: 3em;*/
+			/*"em" unit changes the font size by multiplying the em value with the font-size of the parent container; Eg: 3em*10px(font-size of parent container) = 30px*/
+
+			/*font-size: 3rem;
+			padding: 3rem;*/
+			/*rem unit changes the value by multiplying the em value with the font-size of the whole html.Eg 3rem * 20px(font-size of html) = 60px*/
+
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 id="first">This is first heading</h1>
+		<h1 id="second">This is second heading</h1>
+		<h1 id="third">This is third heading</h1>
+	</div>
+</body>
+</html>

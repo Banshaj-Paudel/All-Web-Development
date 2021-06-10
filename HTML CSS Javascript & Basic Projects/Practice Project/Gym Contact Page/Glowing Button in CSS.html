@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Glowing Button</title>
+	<style type="text/css">
+		body{
+			margin: 0px;
+			padding: 0px;
+			color: white;
+			background-color: #000;
+		}
+
+		.container{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.btn{
+			position: relative;
+			text-align: center;
+			width: 500px;
+			padding: 40px;
+			font-size: 32px;
+			color: #00FF00;
+			font-weight: 400;
+			border: 5px solid #00FF00;
+			text-transform: uppercase;
+			letter-spacing: 15px;
+			cursor: pointer;
+			border-radius: 100px;
+			transition: 1.5s ease;
+		}
+
+		.btn:hover{
+			box-shadow: 0 5px 50px 0 #00FF00 inset,
+						0 5px 50px 0 #00FF00,
+						0 5px 50px 0 #00FF00 inset,
+						0 5px 50px 0 #00FF00;
+			text-shadow: 0 5px 50px 0 #00FF00, 0 5px 50px 0 #00FF00;
+			content: "Good!";
+		}
+
+		.btn:hover span {
+ 			 display:none
+		}
+
+		.btn:hover:before {
+ 			content:"Completed!";
+		}
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="btn"><span>Hover Over Me</span></div>
+	</div>
+</body>
+</html>

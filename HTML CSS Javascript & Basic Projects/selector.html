@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in CSS</title>
+    <style>
+        p {
+            color: yellowgreen;
+        }
+        #span2{
+            border: 2px solid salmon;
+        }
+        /* id selector */
+        #secondparagraph {
+            color: brown;
+        }
+        /* class selector */
+        .purple {
+            color: purple;
+        }
+        /* group selector */
+        footer,
+        #span1{
+            color: tomato;
+            background-color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Selectors in CSS</h2>
+    <p>This is a simple paragraph to demonstrate CSS Selectors (element Selector)</p>
+    <p id="secondparagraph">This is another simple paragraph to demonstrate CSS Selectors (id Selector)</p>
+    <p class="purple">This is yet another simple paragraph to demonstrate CSS Selectors (class Selector)</p>
+    <span id="span1">This is a part of group selector</span>
+    <footer>this is also a part of group selector</footer>
+    <span id="span2">this is how we select border</span>
+
+</body>
+
+</html>

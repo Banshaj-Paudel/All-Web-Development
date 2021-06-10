@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scope, If-else Conditionals & Switch Case in JavaScript </title>
+
+</head>
+<body>
+	<div>
+		<ul>
+			<li>Item1</li>
+			<li>Item2</li>
+			<li>Item3</li>
+			<li>Item4</li>
+			<li>Item5</li>
+			<li>Item6</li>
+			<li>Item7</li>
+		</ul>
+	</div>
+
+<script type="text/javascript">
+	var string1 = "This is a string";
+	console.log(string1)
+
+	// We can create a block with open and close curly brackets. Whatever happens inside block doesn't affect the outside part. For example if we create a variable outside the block and create another variable inside the block with the same name, it will not throw an error because anything inside the block doesn't effect the code out of it.
+
+	// We will use let as a variable container because if we set same name for two different variables, it will give us an error.
+	// let a = "This a string created using let variable declaration"
+	// console.log(a);
+
+	// Creating same variable inside a block
+	{
+		// let a = "This is the string inside the block";
+		// console.log(a);
+	}
+
+	// the value of the const cannot be changed.
+	// const a = "This cannot be changed";
+	// a = "I want to change"; //Trying to over-write the value inside the variable
+	// console.log(a);
+
+	// Conditionals
+
+	let age = 18;
+	if(age>18){
+		console.log("you can drive");
+	}
+	else if(age == 18){
+		console.log("You have to pass the test");
+	}
+	else{
+		console.log("you can not drive");
+	}
+
+	const salary = 20000;
+	switch (salary) {
+		case 10000:
+		console.log("Sorry it is wrong")
+		break;
+
+		case 20000:
+		console.log("Congrats, you're right")
+		break;
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Flex box in CSS</title>
+    <style>
+        .container {
+            height: 544px;
+            width: 100%;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+            /* flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse; */
+            /* flex-wrap: wrap;
+            flex-flow: column wrap; */
+
+            /* justify-content: center;
+            justify-content: space-between;
+            justify-content: space-around;
+            /* justify-content: space-evenly; */
+
+            align-items: center;
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: stretch;
+            /* Mathi kura gareko sabai flex container ko barema thiyo, tyo felx box ko barema hae */
+        }
+
+        .item {
+            border: 2px solid blue;
+            background-color: tomato;
+            margin: 10px;
+            padding: 3px;
+            height: 200px;
+            width: 200px;
+        }
+
+        /* Abha hami flex box bhitra ko huney items ko barema kura garxau which are also know as flex items */
+        #item1 {
+            /* order: 2; */
+            /* flex-grow: 2; */
+            /* flex-shrink: 2; */
+            flex-basis: 300px;
+        }
+
+        #item2 {
+            /* order: 1; */
+            /* flex-grow: 4; */
+            /* flex-shrink: 3 */
+            flex-basis: 500px;
+            align-self: center;
+            align-self: flex-start;
+            align-self: flex-end;
+        }
+
+        #item3 {
+            /* flex-grow: 3; */
+            /* order: 4; */
+            /* flex-shrink: 4; */
+            flex-basis: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>This is heading</h2>
+    <div class="container">
+        <div class="item" id="item1">First box</div>
+        <div class="item" id="item2">Second box</div>
+        <div class="item" id="item3">Third box</div>
+        <!-- <div class="item" id="item4">Fourth box</div>
+        <div class="item" id="item5">Fifth box</div>
+        <div class="item" id="item6">Sixth box</div> -->
+    </div>
+</body>
+
+</html>

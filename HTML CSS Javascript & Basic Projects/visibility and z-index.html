@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visibility and Z-index</title>
+	<style>
+		.box{
+			border: 2px solid sandybrown;
+			height: 165px;
+			width: 165px;
+
+		}
+
+		#box1{
+			background-color: red;
+			position: relative;
+			top: 50px;
+			z-index: 1;
+		/*z-index won't work on position-static(Default). To use z-index we will always have to set position of the element*/
+		
+		}
+
+		#box2{
+			background-color: purple;
+			position: relative;
+			top: 30px;
+/*--------------------------------------------------------------------------------------------------------------------*/
+			/*visibility: hidden; 
+			This will hide the box2(selected element) and leave the space taken by box2.*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+			/*display: none; 
+			This will hide the box2(selected element) and will not leave space taken by box2.*/
+
+		}
+
+		#box3{
+			background-color: greenyellow;
+		}
+
+		#box4{
+			background-color: yellow;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box" id="box1">1</div>
+	<div class="box" id="box2">2</div>
+	<div class="box" id="box3">3</div>
+	<div class="box" id="box4">4</div>
+</body>
+</html>

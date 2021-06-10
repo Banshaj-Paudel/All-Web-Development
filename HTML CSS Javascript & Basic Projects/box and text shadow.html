@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Box and Text Shadows</title>
+	<style>
+		.container{
+			display: flex;
+			/*border: 2px solid black;*/
+		}
+
+		.card{
+			padding: 23px 12px;
+			/*border: 2px solid red;*/
+			background-color: burlywood;
+			margin: 23px 12px;
+			box-shadow: -7px -11px 9px 5px rgb(212 74 221 / 63%), 7px 11px 9px 5px green;  /*box-shadow: X-axis(left-right) Y-axis(top-bottom) blur-radius spread-raduis shadow-color*/
+		}
+
+		.card h1{
+			text-shadow: 4px 2px 4px rebeccapurple;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="card" id="card1">
+			<h1>Home Link</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis.</p>
+		</div>
+		<div class="card" id="card2">
+			<h1>Blog Link</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis.</p>
+		</div>
+		<div class="card" id="card3">
+			<h1>About Us Link</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis.</p>
+		</div>
+	</div>
+</body>
+</html>

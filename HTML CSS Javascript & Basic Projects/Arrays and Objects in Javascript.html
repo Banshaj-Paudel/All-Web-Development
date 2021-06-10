@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays and Objects</title>
+</head>
+<body>
+<script type="text/javascript">
+	let Var= 34; //Integer Data type.
+	let Var2= "String data type";
+	let Var3= true; //Boolean data type.
+	let var4= null;
+	let var5= undefined; 
+
+//Objects are same as variables like let, var and const but the Objects can store more than one value with more than one key-words.
+
+	// Here We Created an Object.(We use curly bracket to create an Object)
+	let employee = {
+		name : "Bhairu",
+		salary : 10,
+		channel : "BhairuDen",
+	}
+	// We can print Object in two ways, either console.log(object_name) or object_name.key-words
+	// example: employee.name Run examples to see the code work.
+
+//Arrays are also the same as variables and objects, it can also store many values under single name, but in this we don't have to pair each and evey value with a key word. Instead, the values are paired with an index number, whose count starts with 0. We can acces this element using their index number.
+
+	//here we create an Array.(We use big brackets to create and print the value of an array)
+	// let boss = ["Bhairu", "Rohan", "Champ"];
+
+	//To find the value, we will use index number:
+	// console.log(boss[2]);
+
+	//Another way to create arrays is:
+	let avengers = new Array("Steve", "Tony", "Thor", "Bruce");
+
+	// Finding the length of an array:
+	// console.log(avengers.length);
+	// avengers = avengers.sort();
+	// console.log(avengers);
+
+	//We can add new values inside an array using push which adds value to the end of the array:
+	// avengers.push("Natasha was added to the array using push");
+	// console.log(avengers);
+
+	// We can remove a value from inside an arary using pop which removes the end value of the array:
+	// avengers.pop();
+</script>
+</body>
+</html>

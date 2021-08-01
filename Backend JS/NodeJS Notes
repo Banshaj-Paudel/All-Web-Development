@@ -1,0 +1,28 @@
+NodeJS Notes
+
+Import all the required libraries using "require("library name")" and assign it into a variable, 
+
+npm init : always use this before starting any project to create dependencies and initiate node package manager
+
+Install the required packages for the current project, using npm install <package_name>
+
+We have to set the template engine to pug.!!
+Create a folder named "views" to store all the templates
+After setting the template engine, we have to set the directory path for the directory containing all 
+the template engine
+
+Create a folder named "static" to store static files that are to be served.
+set the path and the directory that has static files which are to be served.
+
+set the listening port for the server.(the port where it will be listened{80, 8000, 5000}.Our Domain 
+will be localhost or 127.0.0.1)
+
+The templates which we use to preview in the website, we keep them inside the views folder which we 
+made earlier for storing our templates. To show these static files, we use app.render, or else the 
+file will be presented as it is, but we want it to be rendered.
+
+Now about the templates, we only have to learn about the syntax for writing HTML in the PUG template 
+style since CSS and JS files will only be included. We will name our index file as index.pug and it will be inside the views folder because it is a template file and our other files like CSS, JS scripts, images and other media will be in the static folder.
+
+For every new endpoint we will have to change the html file(index.pug) by creating a new one which 
+means it will have new Static files.

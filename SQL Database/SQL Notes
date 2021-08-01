@@ -1,0 +1,302 @@
+SQL Notes:
+
+Run Xampp server and enable apache & MySql servers
+Go to localhost from browser
+Go to PhpMy Admin (This is the dash board of the database)
+
+TO RUN XAMPP SERVER FROM TERMINAL:
+Go to /opt/lampp
+run sudo ./xampp start<name of the server to start>
+For Example: sudo ./xampp start 
+(IF WE PROVIDE ONLY START, IT WILL RUN ALL THE SERVERS ON)
+
+TO STOP XAMMP SERVER FROM TERMINAL
+sudo ./xampp stop
+(giving only stop will stop all the servers, If we want to stop a particular server, we have to write
+sudo ./xampp stop<server_name>)
+
+
+To Create Database:(CAPITALS and Smalls are important)
+CREATE DATABASE <database_name>
+
+To Delete Database:
+DROP DATABASE <database_name>
+
+*We use Relation Database Management system
+=> In this database, data is organied in the form of rows and columns. Database can consist of one or more than one table for storing different types of data.
+
+To Create Table:
+CREATE TABLE <table_name> (
+<name of the column> <data_type>,
+<name of the column> <data_type>
+);
+
+EXAMPLE OF TABLE:
+CREATE TABLE student (
+id int,                                 *(INTEGER(INT) IS USED FOR NUMBER)*
+name VARCHAR(100),          *(VARCHAR IS USED FOR CHARACTERS AND THE NUM IS THE LENGTH OF THE CHARACTER)*
+gender enum('M','F','O'),                     *(enum is used to provide limited option to choose from)*
+DOB date,                                *(FOR STROING DATE)*
+total_fee float,         *(float data-type stores decimal and for spaces in name, use underscore _ )*
+paid_fee float
+);
+
+To Delete TABLE:
+DROP TABLE <table_name>;
+
+**INSERT DATA INTO TABLE:
+INSERT INTO <table_name>(column-name1, colName2,...) VALUES (VALUE-OF-colName1, VALcolName2,...)
+
+EXAMPLE: STRING and DATE VALUE ARE WRITTEN INSIDE SINGLE QUOTE
+INSERT INTO student(id, name, gender, DOB, total_fee, paid_fee) VALUES (1337, 'Bhairu', 'M', '2002-09-29', 13000, 12400);
+
+**To View data from the SQL table:
+SELECT *  FROM <table_name>;
+Example: SELECT * FROM student;
+
+To View particular data of a column from the SQL table:
+SELECT <ColName1>,<ColName2>,<ColName3>..... FROM <student_name>;
+EXample: SELECT paid_fee FROM student;
+
+To view different types of data from a common column:
+SELECT DISTINCT <colName> FROM <table_name>;
+example: SELECT DISTINCT gender FROM student;
+
+To DELETE a data record from the TABLE:
+DELETE FROM <table_name> WHERE <CONDITION>;    :if we do not provide the condition, everything will be deleted
+EXAMPLE: DELETE FROM student WHERE gender = M;
+
+To update into the existing data of a table: IF WE DON'T WRITE THE CONDITION, all the data in the table will change to the updating value.
+UPDATE <table_name> SET <colName>=<value_to_be_changed> WHERE condition
+EXAMPLE: UPDATE student SET paid_fee = '12000' WHERE id=1337; 
+UPDATE student SET paid_fee = '12000', total_fee = 15000 WHERE id=1337; (This is for updating more than one data)
+
+WHERE CLAUSE:
+SELECT * FROM <table_name> WHERE <some condition>;
+
+AND = all the condition should be true
+OR = any one condition should be true
+NOT = no value should be true
+
+IN OPERATOR:
+Retriving data from same column with different value
+SELECT * FROM `students` WHERE total_fee IN(12000);
+SELECT * FROM `students` WHERE total_fee IN(12000, 10000);
+
+NOT IN:
+Excluding conditions of present inside IN
+SELECT * FROM `students` WHERE total_fee NOT IN(12000, 10000);
+
+NULL & EMPTY:
+NULL means nothing given = SELECT * FROM `students` WHERE name IS NULL; or SELECT * FROM `students` WHERE name IS NOT NULL;
+EMPTY means 0length value is present
+
+TO VIEW DATA IN AN ORDER:
+Ascending order: SELECT * FROM `students` ORDER BY name ASC;
+Descending order: SELECT * FROM `students` ORDER BY name DESC;
+
+TO VIEW MINIMUM, MAXIMUM & AVERAGE of the DATA:
+MINIMUM: SELECT MIN(column_name) FROM <table_name>;
+MAXIMUM: SELECT MAX(column_name) FROM <table_name>;
+AVERAGE: SELECT AVG(total_fee) FROM students;
+
+LIMIT:
+It limits the number of data to be represented.
+Example: SELECT * FROM `students` LIMIT 3;
+
+Searching data in database using SQL:
+We use an operator called LIKE Operator.
+
+Wildcard:
+percentage sign % = represents any type of text / multiple character
+Syntax: SELECT <column_name> FROM <table_name> WHERE <column_name> LIKE '<character to be searched>%';
+
+If we want to search the word from the beginning of the index, we use the % sign after the the word:-
+Example: SELECT * FROM students WHERE name LIKE 'b%';
+
+If we want to search the word from the end of the index, we use the % sign before the word:-
+Example: SELECT * FROM students WHERE name LIKE '%a';
+
+If we want to search the word for a letter somewhere at any position, we use the %sign at the start and end:-
+Example: SELECT * FROM students WHERE address LIKE '%irt%';
+
+underscore sign _ = one underscore represents single "fill in the blanks", that means if we use it, the search result will include all the data having those letters which are given and at the end, any letter can come, there is various method of using this with the percentage sign. Look at the syntax and the examples for refrence.This has many possibilities which can be discovered only by exploring and practicing more.
+
+Syntax: SELECT <column_name> FROM <table_name> WHERE <column_name> LIKE 'hackin_'; 
+Example: SELECT * FROM students WHERE interest LIKE 'hackin_';
+Example: SELECT * FROM students WHERE interest LIKE 'ha__ing%'; | Search for word having hackin_ from the beginning
+Example: SELECT * FROM students WHERE interest LIKE '%hackin_'; | Search for word having hackin_ from the end
+Example: SELECT * FROM students WHERE address LIKE 'b%a'; | Search for word that starts with b and ends with a
+
+FUNCTIONS in SQL:
+It performs certain task.
+
+    Types of Function:
+   1.Aggregate Function= Sum(<column_name>) : SELECT SUM(total_fee) FROM students WHERE id IN(1,3,5);
+                         MIN(<column_name>) : SELECT MIN(total_fee) FROM students WHERE id IN(1,3,5);
+                         MAX(<column_name>) : SELECT MAX(total_fee) FROM students WHERE id IN(1,3,5);
+                         COUNT(<either * or column name>) : SELECT COUNT(*) FROM students;
+                         AVG(<column_name>) : SELECT AVG(total_fee) FROM `students`;
+
+   2.String Function= CONCAT(column_name, 'text that is present in between', column_name) : SELECT CONCAT(name, ' is much interested in ', interest) FROM students;
+                      LOWER(column_name) :SELECT LOWER(name) FROM `students`; 
+                      UPPER(column_name) : SELECT UPPER(name) FROM `students`;
+                      REVERSE(column_name) : SELECT REVERSE(name) FROM `students`;
+                      Trim()
+
+   3.Date Function: Now() => Gives Date and Time : SELECT NOW();
+                    CURRENT_DATE() => Gives only Date : SELECT CURRENT_DATE();
+                    CURRENT_TIME() => Gives Time only : SELECT CURRENT_TIME();
+                    DATEDIFF(column_name, column_name) => Helps to find the difference between dates : SELECT DATEDIFF(CURRENT_DATE, dob) FROM students;
+                                                       => Finding the age in years : SELECT FLOOR(DATEDIFF(CURRENT_DATE, dob)/365) AS age FROM students;
+
+Primary Key:
+=>It is a key constrant that uniquely identifies each record. Properties:-
+    a. It cannot be null.
+    b. It must be unique.
+
+Auto_Increment:
+=>Automatically increases the value of the selected column.
+
+Creating Table using Primary Key:
+=> CREATE TABLE person (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    gender enum('M','F','O') NOT NULL,
+    is_added datetime DEFAULT NOW()
+);
+
+Foreign Key:
+=>Foreign key means that the same value can be set many time. The options for setting value are limited since we take the REFERENCES
+from an existing table only. To set a foreign key in another table, we take REFERENCES from a column of table1 and that column
+should be a primary key for it to be refrenced as a foreign key in another/new table.
+
+Creating Table using Foreign Key:
+=> CREATE TABLE phone (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    person_id int NOT NULL,
+    phone VARCHAR(15),
+    is_added datetime DEFAULT NOW(),
+    FOREIGN KEY(person_id) REFERENCES person(id)
+);
+
+Searching the data from cross table in same database:
+=> Here we took the id of a person from another table, using the SQL Search Statement, and then used the output in another Search
+Statement at the same time.
+    =>SELECT phone FROM phone WHERE person_id = (SELECT id FROM person WHERE name = 'Banshaj');
+
+
+JOIN Operator in SQL: (REFER to JOIN.png in SQL Database Notes for picture representation of the JOIN operator)
+=>It is the process of getting result from two or more tables based on related columns. We use 1 JOIN to join 2 tables and 2 JOIN to
+join three tables. It's types are:
+
+1.Inner Join
+=>InnerJoin is a type of JOIN operator which we use to show the data that has matching columns in diferent mentioned tables.
+If we don't set any join in the table, it will set itself to InnerJoin because it is the deault of JOIN.
+
+Syntax:
+SELECT <Name of the table from which column name is to be selected>.<name of the column from the table whose data is to be 
+represented, here we can use multiple tableName.colName>, FROM  TableName1 INNER JOIN TableName2 ON TableName1.MatchingColumn = 
+TableName2.MatchingColumn;
+Example=> SELECT person.name, phone.phone FROM person INNER JOIN phone ON person.id = phone.person_id;
+
+
+2.Left Join
+=>Show the data that is matching with the other table and also those data which is not present in the right table but does exist in
+left table.
+
+SYNTAX: SELECT <Name of the table from which column name is to be selectedN>.<name of the column from the table whose data is to be
+represented, here we can use multiple tableName.colName>, <table name{This will be the left table}> LEFT JOIN <table name{this will
+be the right table}> ON TableName1.MatchingColumn = 
+TableName2.MatchingColumn;
+
+EXAMPLE=> SELECT person.name, phone.phone FROM person LEFT JOIN phone ON person.id = phone.person_id;
+
+3.Right Join
+=> Show the data that is matching with the other table and also those data which is not present in the left table but does exist in
+right table.
+
+SYNTAX: SELECT <Name of the table from which column name is to be selectedN>.<name of the column from the table whose data is to be
+represented, here we can use multiple tableName.colName>, <table name{This will be the left table}> RIGHT JOIN <table name{this will
+be the right table}> ON TableName1.MatchingColumn = TableName2.MatchingColumn;
+
+4.Full Join
+=> All data 
+
+5.Self Join
+
+Joining Three Tables:
+=> Syntax:
+SELECT users.id, users.Name, post.title, post.body, comments.body FROM users JOIN post ON users.id = post.userID JOIN comments ON 
+post.id = comments.postID;
+
+Stored Procedure:
+It stores our SQL queries for future use.
+
+Syntax:
+
+DELIMITER //
+
+CREATE PROCEDURE <name for the procedure>()
+BEGIN
+
+<HERE GOES OUR QUERY>
+
+END //
+DELIMITER ;
+
+Example:
+
+Syntax:
+
+DELIMITER //
+
+CREATE PROCEDURE userMcraftAll()
+BEGIN
+
+SELECT * FROM game_name;
+
+END //
+DELIMITER ;
+
+Stored procedure by using parameters:
+=> Works same as stored procedure but here it takes input in the parameters.This will return the data which is exactly matching.
+Syntax:
+
+DELIMITER //
+
+CREATE PROCEDURE <name for the procedure>(IN <the input which we will provide> data type)
+BEGIN
+
+<HERE GOES OUR QUERY>
+
+END //
+DELIMITER ;
+
+Example:
+DELIMITER //
+
+CREATE PROCEDURE ShowAllUser(IN game_name VARCHAR(100))
+BEGIN
+
+SELECT * FROM players where players.game_name = game_name ; 
+
+END //
+DELIMITER ;
+
+Calling stored procedure:
+=> To use these stored procedure, we can use the following syntax:
+Syntax: CALL userMcraftAll();
+Syntax: CALL ShowAllUser('TD NinjaYt');
+
+VIEWS in SQL:
+=>It is same as stored procedure but like stored procedure, It doesnot accept parameters
+
+Syntax: CREATE VIEW AS viewname <OUR QUERY GOES IN HERE>
+
+EXAMPLE: CREATE VIEW ShowAllPost AS SELECT * FROM post; 
+
+To call the view:
+
+Syntax: SELECT * FROM <view_name>;
+Example: SELECT * FROM ShowAllPost;
